@@ -1,5 +1,5 @@
 import random
-player=100
+player_health=100
 dragon=100
 
 when=['Yesterday','Today','A long time ago','A few years ago','Last night','Early morning','A few days ago']
@@ -12,29 +12,29 @@ for i in range(10):
     player1=random.randint(5,20)
     dragon1=random.randint(5,20)
     print(random.choice(when)+', '+random.choice(who)+' that lived in '+random.choice(place)+', went to the '+random.choice(went)+' and '+random.choice(happened))
-    player=player-player1
+    player_health=player_health-player1
     dragon=dragon-dragon1
     print('***Battle Score***')
-    if player<=0 and dragon<=0:
-        if player>dragon:
-            print('Player HP=',player)
+    if player_health<=0 and dragon<=0:
+        if player_health>dragon:
+            print('Player HP=',player_health)
             print('dragon HP=',dragon)  
             print('Player win')
             exit()
         else:
-            print('Player HP=',player)
+            print('Player HP=',player_health)
             print('Dragon HP=',dragon)  
             print('Dragon win')
             exit()
-    if player<=0:
-        print('Player HP=',player)
+    if player_health<=0:
+        print('Player HP=',player_health)
         print('Dragon HP=',dragon)  
         print('Dragon win')
         exit()
     if dragon<0:
-        print('Player HP=',player)
+        print('Player HP=',player_health)
         print('Dragon HP=',dragon)
         print('Player win')
         exit()
-    print('Player HP=',player)
+    print('Player HP=',player_health)
     print('Dragon HP=',dragon)
